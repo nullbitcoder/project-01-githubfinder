@@ -2,13 +2,17 @@ import React, { Component, Fragment } from 'react';
 import './App.css';
 
 class App extends Component {
-  foo = () => 'Bars'; //create method as part of the class
-
   render() {
     const name = 'John Doe'; //creating a variable
+    const loading = true;
+
+    if (loading) {
+      return <h4>Loading...</h4>;
+    }
+
     return (
       <div className='App'>
-        <h1>Hello {this.foo()}</h1> {/* using class method wiht JSX*/}
+        <h1>Hello {name}</h1> {/* using conditionals with JSX*/}
       </div>
     );
   }
