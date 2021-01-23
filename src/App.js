@@ -4,15 +4,12 @@ import './App.css';
 class App extends Component {
   render() {
     const name = 'John Doe'; //creating a variable
-    const loading = true;
-
-    // if (loading) {
-    //   return <h4>Loading...</h4>;
-    // }
+    const loading = false;
+    const showName = false;
 
     return (
       <div className='App'>
-        {loading ? <h4>Loading...</h4> : <h1>Hello {name}</h1>}
+        {loading ? <h4>Loading...</h4> : <h1>Hello {showName && name} </h1>}
         {/* using conditionals with JSX*/}
       </div>
     );
