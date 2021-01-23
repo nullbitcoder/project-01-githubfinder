@@ -4,9 +4,10 @@ import './App.css';
 class App extends Component {
   render() {
     const name = 'John Doe'; //creating a variable
+    const foo = () => 'Bar'; //creating JavaScript Function
     return (
       <div className='App'>
-        <h1>Hello {name.toUpperCase()}</h1> {/* using JavaScript with JSX*/}
+        <h1>Hello {foo()}</h1> {/* using JavaScript Function wiht JSX*/}
       </div>
     );
   }
