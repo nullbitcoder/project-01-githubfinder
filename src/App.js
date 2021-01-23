@@ -5,7 +5,7 @@ class App extends Component {
   render() {
     const name = 'John Doe'; //creating a variable
     const loading = false;
-    const showName = false;
+    const showName = true;
 
     return (
       <div className='App'>
