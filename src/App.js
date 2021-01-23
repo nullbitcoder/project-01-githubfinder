@@ -2,12 +2,13 @@ import React, { Component, Fragment } from 'react';
 import './App.css';
 
 class App extends Component {
+  foo = () => 'Bars'; //create method as part of the class
+
   render() {
     const name = 'John Doe'; //creating a variable
-    const foo = () => 'Bar'; //creating JavaScript Function
     return (
       <div className='App'>
-        <h1>Hello {foo()}</h1> {/* using JavaScript Function wiht JSX*/}
+        <h1>Hello {this.foo()}</h1> {/* using class method wiht JSX*/}
       </div>
     );
   }
