@@ -1,8 +1,8 @@
 import React from 'react';
 
-const UserItem = () => {
+const UserItem = (props) => {
   // destructuring props to use data
-  const { login, avatar_url, html_url } = this.props.user;
+  const { login, avatar_url, html_url } = props.user;
 
   return (
     <div className='card text-center'>
