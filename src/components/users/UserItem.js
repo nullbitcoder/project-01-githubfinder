@@ -1,4 +1,5 @@
 import React from 'react';
+import { PropTypes } from 'prop-types';
 
 // destructuring in component args instead of in funct body
 const UserItem = ({ user: { login, avatar_url, html_url } }) => {
@@ -22,6 +23,11 @@ const UserItem = ({ user: { login, avatar_url, html_url } }) => {
       </div>
     </div>
   );
+};
+
+// user is being pass through destructuring, pass it to proptypes. ES7 (shortcut) ptor
+UserItem.propTypes = {
+  user: PropTypes.object.isRequired,
 };
 
 export default UserItem;
