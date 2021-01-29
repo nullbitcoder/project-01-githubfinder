@@ -12,7 +12,9 @@ class App extends Component {
   async componentDidMount() {
     this.setState({ loading: true });
     // make request to API
-    const res = await axios.get('https://api.github.com/users');
+    const res = await axios.get(
+      `https://api.github.com/users?client_id=${process.env.REACT_APP_CLIENT_ID}&client_secret=${process.env.REACT_APP_KEY}`
+    );
 
     this.setState({ users: res.data, loading: false });
   }
